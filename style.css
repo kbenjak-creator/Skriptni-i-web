@@ -1,0 +1,28 @@
+.kartica{
+    width:300px;
+    padding:10px;
+    background-color: pink;
+    border: 1px solid purple;
+
+    /*Zaobljuje kuteve elementa*/
+    border-radius: 15px;
+
+    /* Dodaje sjenu elementu*/
+    box-shadow: 10px 10px 15px grey;
+
+    /* Sjena teksta*/
+    text-shadow: 2px, 2px, 4px grey;
+
+
+    opacity: 0.5;
+
+    /*Linearni gradient*/
+    background: linear-gradient(lightblue, lightpink);
+
+    transform: rotate(5deg);
+
+    transform: scale(0.8);
+
+    transform: translate(50px, 50px);
+}
+    
