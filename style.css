@@ -1,28 +1,209 @@
-.kartica{
-    width:300px;
-    padding:10px;
-    background-color: pink;
-    border: 1px solid purple;
-
-    /*Zaobljuje kuteve elementa*/
-    border-radius: 15px;
-
-    /* Dodaje sjenu elementu*/
-    box-shadow: 10px 10px 15px grey;
-
-    /* Sjena teksta*/
-    text-shadow: 2px, 2px, 4px grey;
-
-
-    opacity: 0.5;
-
-    /*Linearni gradient*/
-    background: linear-gradient(lightblue, lightpink);
-
-    transform: rotate(5deg);
-
-    transform: scale(0.8);
-
-    transform: translate(50px, 50px);
+/* Osnovni izgled stranice */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-    
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3d2416;
+    background-color: #fff8ed;
+    line-height: 1.6;
+}
+
+.zaglavlje {
+    min-height: 560px;
+    color: white;
+    background: linear-gradient(rgba(62, 29, 11, 0.58), rgba(62, 29, 11, 0.7)),
+        url("https://images.unsplash.com/photo-1476231682828-37e571bc172f?auto=format&fit=crop&w=1600&q=85") center/cover;
+}
+
+.navigacija {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 24px 30px;
+}
+
+.logo {
+    color: #ffd27d;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.izbornik {
+    display: flex;
+    gap: 25px;
+}
+
+.izbornik a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.izbornik a:hover {
+    color: #ffd27d;
+}
+
+.naslov {
+    max-width: 760px;
+    margin: 105px auto 0;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.mali-naslov,
+.oznaka {
+    color: #e98b37;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: clamp(3rem, 8vw, 6rem);
+    text-shadow: 3px 3px 5px #35170b;
+}
+
+.naslov p:not(.mali-naslov) {
+    font-size: 1.2rem;
+}
+
+.gumb {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 12px 25px;
+    color: white;
+    background-color: #c55724;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background-color 0.3s; /* Samostalno istraženo svojstvo */
+}
+
+.gumb:hover {
+    background-color: #9e3f1a;
+    transform: translateY(-4px);
+}
+
+.sadrzaj,
+.zanimljivosti {
+    max-width: 1100px;
+    margin: auto;
+    padding: 85px 30px;
+}
+
+.sadrzaj {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.tekst {
+    flex: 1;
+}
+
+h2 {
+    margin: 8px 0 18px;
+    color: #73391d;
+    font-size: 2.3rem;
+}
+
+.tekst p:not(.oznaka) {
+    margin-bottom: 15px;
+}
+
+.slika {
+    width: 46%;
+    border: 8px solid white;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(84, 43, 21, 0.25);
+    /* Samostalno istraženo svojstvo */
+    filter: sepia(25%);
+}
+
+.zanimljivosti {
+    max-width: none;
+    text-align: center;
+    background-color: #f4dfc0;
+}
+
+.kartice {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 35px auto 0;
+}
+
+.kartica {
+    flex: 1;
+    padding: 28px 22px;
+    background: #fffaf2;
+    border: 1px solid #e7bd87;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(100, 48, 20, 0.12);
+}
+
+.ikona {
+    font-size: 2.5rem;
+}
+
+.kartica h3 {
+    margin: 8px 0;
+    color: #9e461d;
+}
+
+.poruka {
+    padding: 65px 25px;
+    color: white;
+    background: linear-gradient(135deg, #8e3e1f, #c66a2c);
+    text-align: center;
+}
+
+.poruka p {
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+footer {
+    padding: 20px;
+    color: #fff3df;
+    background-color: #3d2416;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+    .navigacija,
+    .sadrzaj,
+    .kartice {
+        flex-direction: column;
+    }
+
+    .navigacija {
+        gap: 15px;
+    }
+
+    .sadrzaj {
+        padding-top: 55px;
+    }
+
+    .slika {
+        width: 100%;
+    }
+
+    .kartica {
+        width: 100%;
+    }
+}
